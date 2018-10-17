@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daniel Versoza <djversoza@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "redis": "^2.8.0",
+    "rsmq": "^0.9.2"
+  }
 }
