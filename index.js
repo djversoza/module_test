@@ -6,13 +6,18 @@ exports.testQueue = function() {
   rsmq.createQueue({qname:"myqueue"}, function (err, resp) {
 		if (resp===1) {
       console.log("queue created")
-      rsmq.listQueues( function (error, queues) {
-        if( error ){
-          console.error( error )
-          return
-        }
-        console.log("Active queues: " + queues.join( "," ) )
-      });
+      
 		}
 });
   }
+
+exports.checkQueue = function () {
+  let rsmq = new RedisSMQ();
+  rsmq.listQueues( function (error, queues) {
+    if( error ){
+      console.error( error )
+      return
+    }
+    console.log("Active queues: " + queues.join( "," ) )
+  });
+} 
