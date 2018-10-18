@@ -7,8 +7,9 @@ exports.testQueue = function() {
     console.log('creating queue')
 		if (resp===1) {
       console.log("queue created")
-      
-		}
+		} else if (err) {
+      console.log(err)
+    }
 });
   }
 
