@@ -4,6 +4,7 @@ const RedisSMQ = require("rsmq");
 exports.testQueue = function() {
   let rsmq = new RedisSMQ();
   rsmq.createQueue({qname:"myqueue"}, function (err, resp) {
+    console.log('creating queue')
 		if (resp===1) {
       console.log("queue created")
       
